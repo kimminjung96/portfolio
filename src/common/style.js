@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const LayOut = styled.div`
   width: ${(props) => props.width || `1500px`};
   height: ${(props) => props.height || `100%`};
@@ -46,16 +45,6 @@ export const LayOut = styled.div`
     padding-right: 10px;
   }
 `;
-
-/* export const Wrapper = styled.div`
-  width: ${(props) => props.width || `100%`};
-  height: ${(props) => props.height || `100%`};
-  display: ${(props) => props.display || "flex"};
-  color: ${(props) => props.color || "gray"};
-  justify-content: ${(props) => props.ju || "center"};
-  align-items: ${(props) => props.al || "center"};
-  text-align: ${(props) => props.textA || "center"};
-`; */
 
 export const Wrapper = styled.div`
   width: ${(props) => props.width || `100%`};
@@ -114,107 +103,37 @@ export const Wrapper = styled.div`
 `;
 
 export const Btn = styled.button`
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 1rem;
-  line-height: 1;
-  border: 1px solid lightgray;
-  color: ${(props) => props.color || "gray"};
-  background: ${(props) => props.background || "white"};
-`;
-
-export const CommonButton = styled.button`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+  cursor: pointer;
+  padding: ${(props) => props.padding || `28px 45px`};
   margin: ${(props) => props.margin};
-  padding: ${(props) => props.padding};
-  font-size: ${(props) => props.fontSize || `18px`};
+  border: 1px solid lightgray;
+  border-radius: ${(props) => props.radius || `20px`};
+  font-size: ${(props) => props.fontSize || `16px`};
+  font-size: ${(props) => props.fontSize || `16px`};
   line-height: 1;
   color: ${(props) => props.color || props.theme.white_C};
-  border-radius: ${(props) => props.radius || `7px`};
-  box-shadow: none;
+  background-color: ${(props) => props.bgColor || "white"};
+  box-shadow: 0 44px 84px -24px #5956e9;
+  position: relative;
+  overflow: hidden;
 
-  ${(props) => !props.kindOf && `background : ${props.theme.basicTheme_C};`}
-  ${(props) => !props.kindOf && `border : 1px solid ${props.theme.basicTheme_C};`}
-  /* white */
-  ${(props) => props.kindOf === `white` && `background : ${props.theme.subTheme_C};`}
-  ${(props) => props.kindOf === `white` && `color : ${props.theme.basicTheme_C};`}
-  ${(props) => props.kindOf === `white` && `border : 1px solid ${props.theme.subTheme_C};`}
-    /* black */
-  ${(props) => props.kindOf === `black` && `background : ${props.theme.black_C};`}
-  ${(props) => props.kindOf === `black` && `color : ${props.theme.white_C};`}
-  /* subTheme */
-  ${(props) => props.kindOf === `subTheme` && `background : ${props.theme.white_C};`}
-  ${(props) => props.kindOf === `subTheme` && `color : ${props.theme.basicTheme_C};`}
-  ${(props) => props.kindOf === `subTheme` && `border : 1px solid ${props.theme.basicTheme_C};`}
+  :after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    background-color: #2522ba;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+    transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+  }
 
-  ${(props) => props.kindOf === `kakao` && `background : ${props.theme.kakao_C};`}
-  ${(props) => props.kindOf === `kakao` && `color : ${props.theme.subTheme4_C};`}
-  ${(props) => props.kindOf === `kakao` && `border : 1px solid ${props.theme.kakao_C};`}
-
-  ${(props) => props.kindOf === `delete` && `background : ${props.theme.red_C};`}
-  ${(props) => props.kindOf === `delete` && `color : ${props.theme.white_C};`}
-  ${(props) => props.kindOf === `delete` && `border : 1px solid ${props.theme.red_C};`}
-  /* grey */
-  ${(props) => props.kindOf === `grey` && `background : ${props.theme.white_C};`}
-  ${(props) => props.kindOf === `grey` && `color : ${props.theme.grey_C};`}
-  ${(props) => props.kindOf === `grey` && `border : 1px solid ${props.theme.grey_C};`}
-  ${(props) => props.kindOf === `grey` && `font-size : 16px;`}
-
-  /* grey2 */
-  ${(props) => props.kindOf === `grey2` && `background : ${props.theme.white_C};`}
-    ${(props) => props.kindOf === `grey2` && `color : ${props.theme.black2_C};`}
-    ${(props) => props.kindOf === `grey2` && `border : 1px solid ${props.theme.grey_C};`}
-    ${(props) => props.kindOf === `grey2` && `font-size : 16px;`}
-
-  /* grey3 */
-  ${(props) => props.kindOf === `grey3` && `background : ${props.theme.lightGrey3_C};`}
-    ${(props) => props.kindOf === `grey3` && `color : ${props.theme.darkGrey4_C};`}
-    ${(props) => props.kindOf === `grey3` && `border : 1px solid ${props.theme.lightGrey3_C};`}
-  
-
-&:hover {
-    background: ${(props) => props.theme.white_C};
-    color: ${(props) => props.theme.basicTheme_C};
-    ${(props) => !props.kindOf && `border :1px solid ${props.theme.basicTheme_C};`}
-    /* white */
-    ${(props) => props.kindOf === `white` && `background ${props.theme.basicTheme_C};`}
-    ${(props) => props.kindOf === `white` && `color ${props.theme.subTheme_C};`}
-    ${(props) => props.kindOf === `white` && `border : 1px solid ${props.theme.basicTheme_C};`}
-    /* black */
-    ${(props) => props.kindOf === `black` && `background : ${props.theme.white_C};`}
-    ${(props) => props.kindOf === `black` && `color : ${props.theme.black_C};`}
-    ${(props) => props.kindOf === `black` && `border : 1px solid ${props.theme.black_C};`}
-      /* subTheme */
-    ${(props) => props.kindOf === `subTheme` && `color ${props.theme.white_C};`}
-    ${(props) => props.kindOf === `subTheme` && `background ${props.theme.basicTheme_C};`}
-    ${(props) => props.kindOf === `subTheme` && `border : 1px solid ${props.theme.basicTheme_C};`}
-
-          
-
-    ${(props) => props.kindOf === `kakao` && `background : ${props.theme.kakao_C};`}
-    ${(props) => props.kindOf === `kakao` && `color : ${props.theme.subTheme4_C};`}
-    ${(props) => props.kindOf === `kakao` && `border : 1px solid ${props.theme.subTheme4_C};`}
-    ${(props) => props.kindOf === `delete` && `background : ${props.theme.white_C};`}
-    ${(props) => props.kindOf === `delete` && `color : ${props.theme.red_C};`}
-    ${(props) => props.kindOf === `delete` && `border : 1px solid ${props.theme.red_C};`}
-  /* grey */
-    ${(props) => props.kindOf === `grey` && `background : ${props.theme.grey_C};`}
-    ${(props) => props.kindOf === `grey` && `color : ${props.theme.white_C};`}
-    ${(props) => props.kindOf === `grey` && `border : 1px solid ${props.theme.grey_C};`}
-    ${(props) => props.kindOf === `grey` && `font-size : 16px;`}
-
-  /* grey2 */
-    ${(props) => props.kindOf === `grey2` && `background : ${props.theme.black2_C};`}
-    ${(props) => props.kindOf === `grey2` && `color : ${props.theme.grey_C};`}
-    ${(props) => props.kindOf === `grey2` && `border : 1px solid ${props.theme.black2_C};`}
-    ${(props) => props.kindOf === `grey2` && `font-size : 16px;`}
-
-
-  /* grey3 */
-  ${(props) => props.kindOf === `grey3` && `background : ${props.theme.darkGrey4_C};`}
-    ${(props) => props.kindOf === `grey3` && `color : ${props.theme.lightGrey3_C};`}
-    ${(props) => props.kindOf === `grey3` && `border : 1px solid ${props.theme.darkGrey4_C};`}
+  &:hover:after {
+    transform: translateY(-50%) translateX(-50%) scale(1);
+    z-index: 1;
   }
 
   @media (max-width: 800px) {

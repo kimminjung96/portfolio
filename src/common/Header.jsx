@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { CommonButton, Image, LayOut, Text, Wrapper } from "./style";
+import { Btn, Image, LayOut, Text, Wrapper } from "./style";
 
-const HeadBtn = styled(CommonButton)`
+const HeadBtn = styled.p`
   border: none;
   background-color: #fff;
-
   &:hover {
     color: red;
   }
