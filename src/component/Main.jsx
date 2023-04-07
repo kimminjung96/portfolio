@@ -1,9 +1,10 @@
-import { Btn, Image, LayOut, Text, Wrapper } from "../common/style";
+import { Btn, Image, LayOut, Text, Title, Wrapper } from "../common/style";
 import useWidth from "../common/useWidth";
 import styled from "styled-components";
 
 const MainWrapper = styled(Wrapper)`
   position: relative;
+  padding: 120px 0;
 
   &:before {
     content: "";
@@ -60,15 +61,6 @@ const SubSlogan = styled(Slogan)`
     font-size: 24px;
   }
 `;
-const Title = styled.p`
-  margin: 0;
-  font-size: 20px;
-  font-weight: 700;
-  color: #c75c6f;
-  text-align: left;
-  letter-spacing: 0.1em;
-  font-family: D2Coding;
-`;
 
 const Main = () => {
   const width = useWidth();
@@ -89,7 +81,7 @@ const Main = () => {
                 <span className="font96">run</span>
                 <span>김민정</span>
               </Slogan>
-              <SubSlogan>start준비가 된 신입프론트엔드</SubSlogan>
+              <SubSlogan>start준비가 된 frontend</SubSlogan>
               <Wrapper dr={`row`} ju={`flex-start`}>
                 <Btn bgColor={`#5956e9`} color={`#fff`} margin={`0 10px`}>
                   <Text>이력서 다운로드</Text>

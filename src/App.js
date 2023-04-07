@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./common/Header";
+import About from "./component/About";
 import Main from "./component/Main";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
+      <About />
     </div>
   );
 }

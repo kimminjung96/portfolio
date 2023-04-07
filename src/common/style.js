@@ -205,3 +205,41 @@ export const Image = styled.img`
   right: ${(props) => props.right};
   transition: ${(props) => props.transition || `0.3s`};
 `;
+
+export const Title = styled.p`
+  margin: 0 0 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #c75c6f;
+  text-align: left;
+  letter-spacing: 0.1em;
+  font-family: D2Coding;
+  width: 100%;
+`;
+export const SubTitle = styled.p`
+  margin: 0 0 30px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #525260;
+  text-align: left;
+  letter-spacing: 0.1em;
+  font-family: D2Coding;
+  width: 100%;
+`;
+export const SectionTitle = styled.h3`
+  width: 100%;
+  margin: 0;
+  font-size: 64px;
+  font-weight: 500;
+  color: #292930;
+  text-align: left;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  font-family: D2Coding;
+  margin: 0 0 30px;
+`;
+
+export const SectionWrap = styled(Wrapper)`
+  padding: 120px 0;
+`;
