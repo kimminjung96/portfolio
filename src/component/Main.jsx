@@ -15,7 +15,7 @@ const MainWrapper = styled(Wrapper)`
     display: block;
     width: 30%;
     height: 100%;
-    background: url("/images/main1.png") no-repeat;
+    background: url("/images/bg/main1.png") no-repeat;
     background-size: contain;
   }
   &:after {
@@ -27,7 +27,7 @@ const MainWrapper = styled(Wrapper)`
     display: block;
     width: 50%;
     height: 100%;
-    background: url("/images/main2.png") 0% 100% / contain no-repeat;
+    background: url("/images/bg/main2.png") 0% 100% / contain no-repeat;
   }
 `;
 const Slogan = styled.h2`
@@ -74,25 +74,53 @@ const Main = () => {
       <MainWrapper>
         <LayOut>
           <Wrapper dr={`row`} ju={width < 700 ? `center` : "space-between"}>
-            <Wrapper al={width < 700 ? `center` : `left`} width={width < 700 ? `100%` : `auto`}>
+            <Wrapper
+              al={width < 700 ? `center` : `left`}
+              width={width < 700 ? `100%` : `auto`}
+            >
               <Title>npm i minjung</Title>
               <Slogan>
-                <span className="font96">Npm</span>
-                <span className="font96">run</span>
-                <span>김민정</span>
+                <Text
+                  display={`inline-block`}
+                  fontSize={`96px`}
+                  className="font96"
+                >
+                  Npm
+                </Text>
+                <Text
+                  display={`inline-block`}
+                  fontSize={`96px`}
+                  className="font96"
+                >
+                  run
+                </Text>
+                <Text display={`inline-block`} Pret={true}>
+                  김민정
+                </Text>
               </Slogan>
               <SubSlogan>start준비가 된 frontend</SubSlogan>
               <Wrapper dr={`row`} ju={`flex-start`}>
                 <Btn bgColor={`#5956e9`} color={`#fff`} margin={`0 10px`}>
-                  <Text>이력서 다운로드</Text>
+                  <Text Pret={true}>이력서 다운로드</Text>
                 </Btn>
                 <Btn bgColor={`#5956e9`} color={`#fff`} margin={`0 10px`}>
                   <Text>github 바로가기</Text>
                 </Btn>
               </Wrapper>
             </Wrapper>
-            <Wrapper width={width < 700 ? `50%` : `30%`}>
-              <Image src="/images/minjung.png" alt="나의 프로필 사진" />
+            <Wrapper
+              width={width < 700 ? `50%` : `40%`}
+              height={`700px`}
+              overflow={`hidden`}
+              bgColor={`linear-gradient(180deg, pink, white)`}
+              radius={`48% 48% 0 0`}
+            >
+              <Image
+                src="/images/my/min.png"
+                alt="나의 프로필 사진"
+                transform={`rotateY(180deg)`}
+                objPosition={`60px 540px`}
+              />
             </Wrapper>
           </Wrapper>
         </LayOut>

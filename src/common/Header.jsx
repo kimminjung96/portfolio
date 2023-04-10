@@ -12,7 +12,8 @@ const HeadLink = styled.p`
 
   &:hover {
     color: #fff;
-    box-shadow: 200px 0 0 0 rgba(0, 0, 0, 0.25) inset, -200px 0 0 0 rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 200px 0 0 0 rgba(0, 0, 0, 0.25) inset,
+      -200px 0 0 0 rgba(0, 0, 0, 0.25) inset;
   }
 `;
 
@@ -20,7 +21,12 @@ const Header = () => {
   return (
     <>
       <LayOut>
-        <Wrapper dr={`row`} ju={`space-between`}>
+        <Wrapper
+          dr={`row`}
+          ju={`space-between`}
+          padding={`30px 0`}
+          positiion={`fixed`}
+        >
           <Image width={`auto`} src="" alt="로고" />
           <Wrapper dr={`row`} width={`auto`}>
             <HeadLink>HOME</HeadLink>

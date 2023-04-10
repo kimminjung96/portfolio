@@ -175,6 +175,11 @@ export const Text = styled.p`
   font-family: ${(props) => props.fontFamily};
 
   ${(props) =>
+    props.Pret
+      ? `
+      font-family: PretendardRegular;`
+      : `font-family : D2Coding;`}
+  ${(props) =>
     props.isEllipsis
       ? `
   display: block;
@@ -194,6 +199,7 @@ export const Image = styled.img`
   cursor: ${(props) => props.cursor};
   transform: ${(props) => props.transform};
   object-fit: ${(props) => props.objectFit || `cover`};
+  object-position: ${(props) => props.objPosition || `0 0`};
   position: ${(props) => props.position};
   box-shadow: ${(props) => props.shadow};
   border: ${(props) => props.border};
@@ -204,6 +210,7 @@ export const Image = styled.img`
   bottom: ${(props) => props.bottom};
   right: ${(props) => props.right};
   transition: ${(props) => props.transition || `0.3s`};
+  transform: ${(props) => props.transform};
 `;
 
 export const Title = styled.p`
